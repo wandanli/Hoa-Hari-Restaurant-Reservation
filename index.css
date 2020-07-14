@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: kid1;
+    src:url("img/kidS_Written.otf");
+}
+
+@font-face{
+    font-family: kid2;
+    src:url("img/Kid_Knowledge.otf");
+}
+
+
+header{
+    position: relative;
+    height: 10vw;
+    width: 100%;
+    border-bottom: #cecece solid 1px;
+}
+
+#nameContainer{
+    position: relative;
+    top: 2vw;
+    height: 6vw;
+    display: flex;
+    overflow: hidden;
+    color: #fda605;
+    font-family: kid1;
+    font-size: 6vw;
+}
+
+#name1{
+    line-height: 6vw;
+    padding-left: 3vw;
+    color: #fda605;
+    font-family: kid1;
+    font-size: 6vw;
+    margin-top: 0;
+    /* animation: changeName1 2s 1s forwards; */
+}
+
+#name1btn{
+line-height: 20px;
+ width: 22px;
+ height: 22px;;
+ font-size: 20px;
+ border-radius: 10px;
+ background-color: #444444c7;
+ margin: 5px;
+ cursor: pointer;
+ color: white;
+ outline:0 !important; 
+}
+
+
+/* @keyframes changeName1{
+    100%{margin-top:6vw;}
+} */
+
+/* #name2{
+    line-height: 6vw;
+    padding-left: 3vw;
+    color: #fda605;
+    font-family: kid1;
+    font-size: 6vw;
+    margin-top: -6vw;
+    position: absolute;
+    top: 0;
+    animation: changeName2 2s 1s forwards;
+} */
+
+/* @keyframes changeName2{
+    100%{margin-top:0;}
+} */
+
+#nav{
+    position: absolute;
+    right: 3vw;
+    bottom: 0%;
+}
+
+#nav > a{
+text-decoration: none;
+font-family: kid2;
+color: #444444c7;
+padding-left: 3vw;
+font-size: 1.5vw;
+}
+
+#nav > a:hover{
+    color: #fda605;
+}
+
+#nav > a.present{
+    color: #ff3e6d;
+}
+
+#center{
+    max-width: 1680px;
+    margin: auto;
+    position: relative;
+}
+
+#bite{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 70%;
+}
+
+#carouselslide{
+    width: 70%;
+    height: auto;
+    margin: 2vw 0;
+}
+
+.mySlide > img{
+    width: 100%;
+    vertical-align: middle;
+    /* display: none; */
+}
+
+#dot{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 70%;
+}
+
+.dot {
+
+    height: 15px;
+    width: 15px;
+    margin: 0 0.5vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+.active {
+    background-color: #717171;
+  }
+
+#content{
+    position: absolute;
+    left: 60%;
+    top:30%;
+    color: #ff3e6d;
+    font-family: kid1;
+    font-size: 5vw;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    background-color: #feffdb;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #44444493;
+    font-size: 0.8vw;
+    word-spacing: 0.3vw;
+    position: fixed;
+    bottom: 0;
+}

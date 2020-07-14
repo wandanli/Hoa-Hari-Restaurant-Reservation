@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css" />
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Project 2</title>
+</head>
+
+<body>
+    <header>
+        <div id="nameContainer">
+            <p id="name1">Hoa Hari ;</p>
+            <button id="name1btn" onclick="translateName()">?</button>
+        </div>
+        <div id="nav">
+            <a class="present" href="#">Home</a>
+            <a href="part1/part1.html">Book Restaurant</a>
+            <!-- <a href="part2/index.html">Play Game</a> -->
+            <a href="part1/documentation1.html">Documentation</a>
+            <!-- <a href="part2/storyboard.pdf">Documentation Part 2</a> -->
+        </div>
+    </header>
+
+    <div id="center">
+        <img id="bite" src="img/1.png" alt="">
+        <div id="carouselslide">
+            <div class="mySlide move"><img src="img/1.jpg" alt=""></div>
+            <div class="mySlide move"><img src="img/2.jpg" alt=""></div>
+            <div class="mySlide move"><img src="img/3.jpg" alt=""></div>
+        </div>
+        <div id="dot">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div id="content">
+            <p>Expect the best</p>
+            <p>ê è ö ñ</p>
+        </div>
+    </div>
+    <footer>
+        <p>© Copyright 2019 Hoa Hari Restaurant</p>
+    </footer>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlide");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000);
+        }
+        //Translate name from Maori to English
+        tippy('#name1btn', {
+            content: "Translate",
+            placement: "right",
+            theme: "light",
+            arrow: false,
+            animation: "scale",
+            delay: [0, 0],
+        });
+
+
+        function translateName() {
+            if (document.getElementById("name1").textContent == "Hoa Hari ;") {
+                document.getElementById("name1").innerHTML = "Happy Friend ;"
+            }
+            else {
+                document.getElementById("name1").innerHTML = "Hoa Hari ;"
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="part1.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css" />
+    <link href='https://fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script src="https://kit.fontawesome.com/a062f1fd0d.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="part1.js"></script>
+    <title>part 1</title>
+</head>
+
+<body onload="pageOnload()">
+    <div style="position: sticky; top:0; z-index: 999; background-color: white;">
+        <header>
+            <p id="name">Hoa Hari ;</p>
+            <div id="nav">
+                <a href="../index.html">Home</a>
+                <a class="present" href="#">Book Restaurant</a>
+                <!-- <a href="../part2/index.html">Play Game</a> -->
+                <a href="documentation1.html">Documentation</a>
+                <!-- <a href="../part2/storyboard.pdf">Documentation Part 2</a> -->
+            </div>
+        </header>
+    </div>
+    <div id="title">
+        <p>Glad to reserve a table for you at <span>Hoa Hari !</span> </p>
+    </div>
+    <div id="booking">
+        <div id="detail">
+            <div id="detail_1">
+                <p class="step">1. Booking Details</p>
+                <div id="detail_1Container">
+                    <div id="date_container">
+                        <i class="far fa-calendar-alt"></i>
+                        <input type="date" id="inputdate" oninput="onDateInput()">
+                    </div>
+                    <div id="time_container">
+                        <i class="far fa-clock"></i>
+                        <select name="timeselect" id="inputtime" oninput="onTimeSelected()">
+                            <option value="1000">10:00 AM</option>
+                            <option value="1030">10:30 AM</option>
+                            <option value="1100">11:00 AM</option>
+                            <option value="1130">11:30 AM</option>
+                            <option value="1200">12:00 PM</option>
+                            <option value="1230">12:30 PM</option>
+                            <option value="1300">01:00 PM</option>
+                            <option value="1330">01:30 PM</option>
+                            <option value="1400">02:00 PM</option>
+                            <option value="1430">02:30 PM</option>
+                            <option value="1500">03:00 PM</option>
+                            <option value="1530">03:30 PM</option>
+                            <option value="1600">04:00 PM</option>
+                            <option value="1630">04:30 PM</option>
+                            <option value="1700">05:00 PM</option>
+                            <option value="1730">05:30 PM</option>
+                            <option value="1800">06:00 PM</option>
+                            <option value="1830">06:30 PM</option>
+                            <option value="1900">07:00 PM</option>
+                            <option value="1930">07:30 PM</option>
+                            <option value="2000">08:00 PM</option>
+                            <option value="2030">08:30 PM</option>
+                        </select>
+                    </div>
+                    <div id="people_container">
+                        <i class="far fa-user"></i>
+                        <select name="people" id="inputpeople" oninput="onPeopleSelected()"></select>
+                    </div>
+                </div>
+            </div>
+            <div id="detail_2">
+                <p class="step">2. Booking Tables</p>
+                <div id="tableSelect">
+                    <div id="locationSelectContainer">
+                        <i class="fas fa-map-pin"></i>
+                        <select name="locationSelect" id="locationSelect" onchange="onLocationSelected()">
+                            <option value="" disabled selected>Location</option>
+                            <option value="room1">Room 1</option>
+                            <option value="room2">Room 2</option>
+                            <option value="deck">Deck</option>
+                        </select>
+                    </div>
+                    <div id="tableStatus">
+                        <div>
+                            <i class="fas fa-square"></i> Available&emsp;
+                            <i class="fas fa-square"></i> Unavailable&emsp;
+                            <i class="fas fa-square"></i> Selected&emsp;
+                            <i class="fas fa-square"></i> Booked
+                        </div>
+                    </div>
+                    <div id="roomName">
+                        <div>--- Room 1 ---</div>
+                        <div>--- Room 2 ---</div>
+                    </div>
+                    <div id="deckName">--- Deck ---</div>
+                    <div id="allTableContainer">
+                    </div>
+                </div>
+            </div>
+
+            <div id="detail_3">
+                <p class="step">3. Booking Dishes</p>
+                <div id="dishesTable">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="conContainer">
+            <div id="confirmation">
+                <p id="conTitle">Reservation</p>
+                <table id="conTable">
+                    <tr class="con_nomal">
+                        <td>Date:</td>
+                        <td id="conDate"></td>
+                    </tr>
+                    <tr class="con_nomal">
+                        <td>Time:</td>
+                        <td id="conTime"></td>
+                    </tr>
+                    <tr class="con_nomal">
+                        <td>People:</td>
+                        <td id="conPeople"></td>
+                    </tr>
+                    <tr class="con_nomal">
+                        <td>Table:</td>
+                        <td id="conTables"></td>
+                    </tr>
+                    <tr>
+                        <td id="conDishesRowTitle">Dishes:</td>
+                        <td id="conDishes">
+                            <div style="border-bottom: 1px dotted rgba(0, 0, 0, 0.3); padding-top: 2.5vw;"></div>
+                        </td>
+                    </tr>
+                </table>
+                <table id="total">
+                    <tr>
+                        <td>
+                            <p><i class="fas fa-comments-dollar"></i> Total:</p>
+                        </td>
+                        <td>
+                            <p id="money"></p>
+                        </td>
+                    </tr>
+                </table>
+                <table id="conButton">
+                    <tr>
+                        <td><button type="button" onclick="onConfirmClicked()"><i
+                                    class="fas fa-check-circle"></i></button></td>
+                        <td><button type="button" onclick="onCancelClicked()"><i
+                                    class="fas fa-times-circle"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm</td>
+                        <td>Cancel</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="weather" class="modal">
+        <div class="modal-content">
+            <div class="close">&times;</div>
+            <p style="font-weight: bolder; color: #ff3e6d;" id="modalText"></p>
+            <p>Reservation of deck is only for today.</p>
+            <p>And if weather is permitted: no rain and temperature is above 18℃.</p>
+            <table style="width: 500px; border-top: 1px rgba(0, 0, 0, 0.3) dotted; margin-top: 4px;">
+                <tr>
+                    <td style="color:#459dfc;">Today Temperature:</td>
+                    <td id="temp" style="text-align: left;padding-right: 10px;"></td>
+                    <td style="color:#459dfc;">Today Weather:</td>
+                    <td id="weatherDescription" style="text-align: left;"></td>
+                    <td id="pic"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="alert" class="modal">
+        <div class="alert-modal-content">
+            <div class="alert-modal-message">
+                <p id="alertMessage"></p>
+            </div>
+            <div class="alert-modal-footer">
+                <div class="alert-btn" id="ok">OK</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="option" class="modal">
+        <div class="alert-modal-content">
+            <div class="alert-modal-message">
+                <p id="optionMessage"></p>
+            </div>
+            <div class="alert-modal-footer">
+                <div class="alert-btn" id="no">NO</div>
+                <div class="alert-btn" id="yes">YES</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reservationModal" class="modal">
+        <div class="alert-modal-content">
+            <div class="alert-modal-message">
+                <p id="reservationDetail"></p>
+            </div>
+            <div class="alert-modal-footer"
+                style="background-color: #459dfc; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+                <div class="alert-btn" id="done" style="color:white;">Done!</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dishes>
+    <dish>
+        <name>Halloumi Bruschetta</name>
+        <image>halloumi_bruschetta.jpg</image>
+        <description>Grilled halloumi, poached egg, cherry tomato, mint salsa.</description>
+        <typeIndication>Vegetarian</typeIndication>
+        <cost>20</cost>
+    </dish>
+    <dish>
+        <name>Pumpkin Soup</name>
+        <image>creamy_pumpkin_soup.jpg</image>
+        <description>Pumpkin soup with toast.</description>
+        <typeIndication>Vegan</typeIndication>
+        <cost>15</cost>
+    </dish>
+
+    <dish>
+        <name>Toasted Sandwich</name>
+        <image>toasted_sandwich.jpg</image>
+        <description>Options of any 3 fillings.</description>
+        <typeIndication>Vegetarian</typeIndication>
+        <cost>10</cost>
+    </dish>
+    <dish>
+        <name>Smoked Salmon</name>
+        <image>smoked_salmon.jpg</image>
+        <description>Sesame bagel, smoked salmon, grilled lemon, olive oil.</description>
+        <typeIndication>Egg Free</typeIndication>
+        <cost>19</cost>
+    </dish>
+    <dish>
+        <name>Bun Burger</name>
+        <image>bun_burger.jpg</image>
+        <description>Pork belly, house-made onion jam, red pork sauce, chilli coleslaw.</description>
+        <typeIndication> </typeIndication>
+        <cost>23</cost>
+    </dish>
+    <dish>
+        <name>Blueberry Hotcake</name>
+        <image>blueberry_hotcake.jpg</image>
+        <description>Puffed Blueberry hotcakes, fresh seasonal fruits, maple syrup.</description>
+        <typeIndication>Vegetarian</typeIndication>
+        <cost>17</cost>
+    </dish>
+    <dish>
+        <name>Creamy Mushrooms</name>
+        <image>creamy_mushrooms.jpg</image>
+        <description>Puffed Blueberry hotcakes, fresh seasonal fruits, maple syrup.</description>
+        <typeIndication>Vegetarian</typeIndication>
+        <cost>18</cost>
+    </dish>
+    <dish>
+        <name>Vege Stack</name>
+        <image>vege_stack.jpg</image>
+        <description>Field mushrooms, grilled tomato, shallot, roasted capsicum.</description>
+        <typeIndication>Gluten Free</typeIndication>
+        <cost>18</cost>
+    </dish>
+
+    <dish>
+        <name>Chicken Salad</name>
+        <image>chicken_salad.jpg</image>
+        <description>Chicken salad with cucumber, red pepper and honey-mustard dressing.</description>
+        <typeIndication> </typeIndication>
+        <cost>22</cost>
+    </dish>
+    <dish>
+        <name>Seafood Salad</name>
+        <image>seafood_salad.jpg</image>
+        <description>Baby squid hoods, raw shrimp, crab meat, mixed fresh herb leaves.</description>
+        <typeIndication>Egg Free</typeIndication>
+        <cost>25</cost>
+    </dish>
+    <dish>
+        <name>Ginger Tofu</name>
+        <image>honey_ginger_tofu.jpg</image>
+        <description>Crispy firm tofu, shitake mushroom, fried lotus root, white miso.</description>
+        <typeIndication>Gluten Free</typeIndication>
+        <cost>13</cost>
+    </dish>
+    <dish>
+        <name>Avocado on Toast</name>
+        <image>smashed_avocado_on_toast.jpg</image>
+        <description>Smashed avocado, edamame, lemon zest, poached egg, feta cheese.</description>
+        <typeIndication>Vegetarian</typeIndication>
+        <cost>18</cost>
+    </dish>
+</dishes>
